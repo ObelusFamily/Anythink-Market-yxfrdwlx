@@ -1,0 +1,24 @@
+version: v1
+kind: kubernetes
+application: Anythink
+targets: 
+  staging:
+    account: Anythink-Market-yxfrdwlx
+    namespace: Anythink-Market-yxfrdwlx
+    strategy: bluelake
+manifests:  
+  - path: manifests/potato-facts.yml
+strategies: 
+  bluelake:
+    bluegreen:
+      redirectTrafficAfter:
+        - pause:
+            untilApproved: true
+      shutDownOldVersionAfter:
+        - pause:
+            untilApproved: true
+  rolling:
+    canary:
+      steps: 
+      - setWeight:
+          weight: 100
