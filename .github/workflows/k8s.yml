@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - main
+      - stephenatwell-add-armory
 jobs:
   check-kubernetes-enabled:
     runs-on: ubuntu-latest
