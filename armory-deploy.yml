@@ -7,7 +7,7 @@ targets:
     namespace: Anythink-Market-yxfrdwlx
     strategy: bluelake
 manifests:  
-  - path: manifests-anythink.yml
+  - path: manifests/anythink.yml
 strategies: 
   bluelake:
     bluegreen:
