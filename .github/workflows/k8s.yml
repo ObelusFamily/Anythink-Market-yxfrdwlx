@@ -154,7 +154,7 @@ jobs:
       - name: Bake
         run: |
           helm template anythink-market ./charts/ \
-              --set clusterEnv=${{ secrets.CLUSTER_ENV }}
+              --set clusterEnv=${{ secrets.CLUSTER_ENV }} \
               --set frontend.image.tag=${{ env.IMAGE_TAG }} \
               --set backend.image.tag=${{ env.IMAGE_TAG }} > /manifests-anythink.yml
       - name: Deploy
