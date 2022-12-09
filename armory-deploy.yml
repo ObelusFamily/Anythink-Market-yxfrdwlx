@@ -14,7 +14,7 @@ targets:
           - name: environment
             value: staging
 manifests:  
-  - path: manifests/potato-facts.yml
+  - path: manifests/anythink.yml
 strategies: 
   bluelake:
     bluegreen:
