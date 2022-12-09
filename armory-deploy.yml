@@ -3,7 +3,7 @@ kind: kubernetes
 application: Anythink
 targets: 
   staging:
-    account: Anythink-Market-yxfrdwlx
+    account: anythink-production
     namespace: Anythink-Market-yxfrdwlx
     strategy: bluelake
 manifests:  
