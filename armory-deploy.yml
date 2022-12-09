@@ -11,8 +11,7 @@ targets:
       - runWebhook:
           name: Notify_Wilco_Completion
           context:
-          - name: environment
-            value: staging
+          - environment: staging
 manifests:  
   - path: manifests/anythink.yml
 strategies: 
