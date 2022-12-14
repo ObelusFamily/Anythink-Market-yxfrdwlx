@@ -3,8 +3,7 @@ kind: kubernetes
 application: Anythink
 targets: 
   staging:
-    account: anythink-production
-    namespace: Anythink-Market-yxfrdwlx
+    account: prod
     strategy: bluelake
     constraints:
       afterDeployment:
