@@ -4,6 +4,7 @@ application: Anythink
 targets: 
   staging:
     account: prod
+    namespace: anythink-market-yxfrdwlx
     strategy: bluelake
     constraints:
       afterDeployment:
