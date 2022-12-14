@@ -29,7 +29,7 @@ strategies:
       - setWeight:
           weight: 100
 webhooks: 
-#https://engine.wilco.gg/users/${{WILCO_ID}}/event
+#https://engine.wilco.gg/users/{{secrets.WILCO_ID}}/event
 #'{ "event": "armory_webhook", "payload": {...} }'
   - name: Notify_Wilco_Completion
     method: POST
