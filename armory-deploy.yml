@@ -5,7 +5,7 @@ targets:
   staging:
     account: prod
     namespace: anythink-market-yxfrdwlx
-    strategy: bluelake
+    strategy: rolling
     constraints:
       afterDeployment:
       - runWebhook:
@@ -16,12 +16,12 @@ targets:
 manifests:  
   - path: manifests/anythink.yml
   
-trafficManagement:
-  - targets: [prod-eu]
-    kubernetes:
-      - activeService: anythink-backend
-      - activeService: anythink-frontend
-      - activeService: postgres-python
+#trafficManagement:
+#  - targets: [prod-eu]
+#    kubernetes:
+#      - activeService: anythink-backend
+#      - activeService: anythink-frontend
+#      - activeService: postgres-python
       
 strategies: 
   bluelake:
