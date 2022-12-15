@@ -12,14 +12,17 @@ targets:
           name: Notify_Wilco_Completion
           context:
             environment: staging
+            
 manifests:  
   - path: manifests/anythink.yml
+  
 trafficManagement:
   - targets: [prod-eu]
     kubernetes:
       - activeService: anythink-backend
       - activeService: anythink-frontend
       - activeService: postgres-python
+      
 strategies: 
   bluelake:
     bluegreen:
@@ -65,3 +68,4 @@ webhooks:
     #    }
     #
     retryCount: 3
+    disableCallback: true
