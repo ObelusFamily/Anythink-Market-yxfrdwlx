@@ -5,7 +5,7 @@ targets:
   staging:
     account: prod
     namespace: anythink-market-yxfrdwlx
-    strategy: rolling
+    strategy: bluelake
     constraints:
       afterDeployment:
       - runWebhook:
