@@ -19,8 +19,8 @@ manifests:
 trafficManagement:
   - targets: [staging]
     kubernetes:
-      - activeService: anythink-backend
       - activeService: anythink-frontend
+      - activeService: anythink-backend
       - activeService: postgres-python
       
 strategies: 
