@@ -16,12 +16,12 @@ targets:
 manifests:  
   - path: manifests/anythink.yml
   
-#trafficManagement:
-#  - targets: [prod-eu]
-#    kubernetes:
-#      - activeService: anythink-backend
-#      - activeService: anythink-frontend
-#      - activeService: postgres-python
+trafficManagement:
+  - targets: [staging]
+    kubernetes:
+      - activeService: anythink-backend
+      - activeService: anythink-frontend
+      - activeService: postgres-python
       
 strategies: 
   bluelake:
