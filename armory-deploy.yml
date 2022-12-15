@@ -37,6 +37,7 @@ strategies:
       steps: 
       - setWeight:
           weight: 100
+          
 webhooks: 
   - name: Notify_Wilco_Completion
     method: POST
