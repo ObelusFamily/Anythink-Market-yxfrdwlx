@@ -1,6 +1,6 @@
 version: v1
 kind: kubernetes
-application: Anythink
+application: Any Think
 targets: 
   staging:
     account: prod
