@@ -7,7 +7,7 @@ targets:
     namespace: anythink-market-yxfrdwlx
     strategy: rolling #bluelake
     constraints:
-      afterDeployment:
+      beforeDeployment:
       - runWebhook:
           name: Notify_Wilco_Completion
           context:
