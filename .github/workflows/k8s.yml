@@ -154,4 +154,5 @@ jobs:
           helm upgrade --install --timeout 10m anythink-market ./charts/ \
               --set clusterEnv=${{ secrets.CLUSTER_ENV }} \
               --set frontend.image.tag=${{ env.IMAGE_TAG }} \
-              --set backend.image.tag=${{ env.IMAGE_TAG }}
+              --set backend.image.tag=${{ env.IMAGE_TAG }} \
+              --set templates.deployment=anythink-backend-deployment.yaml,templates.service=anythink-backend-service.yaml,anythink-frontend-deployment.yaml,templates.service=anythink-frontend-service.yaml
