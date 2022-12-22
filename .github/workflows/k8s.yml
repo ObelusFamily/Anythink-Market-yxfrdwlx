@@ -159,6 +159,7 @@ jobs:
           helm template anythink-market ./charts/ \
               --set clusterEnv=${{ secrets.CLUSTER_ENV }} \
               --set frontend.image.tag=${{ env.IMAGE_TAG }} \
+              --set templates.deployment=anythink-backend-deployment.yaml,templates.service=anythink-backend-service.yaml,anythink-frontend-deployment.yaml,templates.service=anythink-frontend-service.yaml \
               --set backend.image.tag=${{ env.IMAGE_TAG }} > manifests/anythink.yml
       - name: Deploy
         uses: armory/cli-deploy-action@main
