@@ -161,6 +161,7 @@ jobs:
               --set clusterEnv=${{ secrets.CLUSTER_ENV }} \
               --set frontend.image.tag=${{ env.IMAGE_TAG }} \
               --set backend.image.tag=${{ env.IMAGE_TAG }} > manifests/anythink.yml
+              --set templates.deployment=anythink-backend-deployment.yaml
       - name: Deploy
         uses: armory/cli-deploy-action@main
         with:
