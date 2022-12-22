@@ -21,7 +21,6 @@ trafficManagement:
     kubernetes:
       - activeService: anythink-frontend
       - activeService: anythink-backend
-      - activeService: postgres-python
       
 strategies: 
   bluelake:
