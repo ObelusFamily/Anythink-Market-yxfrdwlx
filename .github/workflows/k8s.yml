@@ -155,12 +155,11 @@ jobs:
 
       - name: mkdir
         run: mkdir manifests
-      - name: Bake
+      - name: Bake               #--set templates.deployment=anythink-backend-deployment.yaml \
         run: |
           helm template anythink-market ./charts/ \
               --set clusterEnv=${{ secrets.CLUSTER_ENV }} \
               --set frontend.image.tag=${{ env.IMAGE_TAG }} \
-              #--set templates.deployment=anythink-backend-deployment.yaml \
               --set database.deploy=false \
               --set backend.image.tag=${{ env.IMAGE_TAG }} > manifests/anythink.yml
       - name: Deploy
