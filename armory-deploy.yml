@@ -41,6 +41,8 @@ webhooks:
   - name: Notify_Wilco_Completion
     method: POST
     uriTemplate: https://engine.wilco.gg/users/{{secrets.WILCO_ID}}/event
+    headers:
+      Content-Type: application/json
     bodyTemplate:
       inline:  >-
         {
