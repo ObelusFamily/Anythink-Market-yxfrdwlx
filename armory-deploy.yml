@@ -42,7 +42,8 @@ webhooks:
     method: POST
     uriTemplate: https://engine.wilco.gg/users/{{secrets.WILCO_ID}}/event
     headers:
-    -  Content-Type: application/json
+    -  Key: Content-Type
+       value: application/json
     bodyTemplate:
       inline:  >-
         {
